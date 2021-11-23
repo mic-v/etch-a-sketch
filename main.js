@@ -29,7 +29,12 @@ for(let i = 0; i < 256; i++) {
     gridItem[i].style.paddingTop = '100%';
     //gridItem[i].style.padding = '0.5em';
     gridItem[i].innerHTML = '';
-    
+
+    gridItem[i].addEventListener('mouseenter', function(event) {
+        console.log("test hover");
+        event.target.style.backgroundColor = "#000";
+    });
+
 
 }
 
@@ -43,6 +48,10 @@ function mediaQueries(x) {
         sketchPad.style.gridTemplateColumns = 'repeat(16, 3vh)';
         sketchPad.style.gridTemplateRows = 'repeat(16, 3vh)';
     }
+}
+
+function hoverEffect() {
+    console.log("test hover");
 }
 
 x.addListener(mediaQueries);
